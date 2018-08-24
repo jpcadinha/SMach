@@ -13,9 +13,9 @@
 class Wallet
 {
 public:
-  Wallet ();
-  virtual
-  ~Wallet ();
+  Wallet();
+  virtual ~Wallet ();
+
   bool withdraw_funds(int amount);
   bool deposit_funds(int amount);
   int get_balance();

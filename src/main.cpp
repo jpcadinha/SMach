@@ -7,7 +7,8 @@
 #include <iostream>
 #include "../include/slot.h"
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
   Slot * slot_machine;
 
   std::cout << "*** FMQ SLOT MACHINE ***" << std::endl;

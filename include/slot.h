@@ -13,6 +13,7 @@
 #include <string>
 #include <stdlib.h>
 #include "../include/wallet.h"
+#include "../include/spinner_list.h"
 
 class Slot
 {
@@ -24,6 +25,7 @@ public:
 
 private:
   Wallet * wallet;
+  SpinnerList * spinners;
 
   bool play_again();
   void print_balance();

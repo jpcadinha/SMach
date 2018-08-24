@@ -7,17 +7,21 @@
 
 #include "../include/slot.h"
 
-Slot::Slot ()
+Slot::Slot()
 {
   this->wallet = new Wallet();
+  this->spinners = new SpinnerList();
+  this->spinners->add_spinner("ABBCDDEEEFFF");
+  this->spinners->add_spinner("ABCCDDEEEFFF");
+  this->spinners->add_spinner("ABCCDDEEFFFF");
 }
 
-Slot::~Slot ()
+Slot::~Slot()
 {
   delete wallet;
 }
 
-void Slot::run ()
+void Slot::run()
 {
   int bet, prize = 0;
 
@@ -27,6 +31,7 @@ void Slot::run ()
       bet = get_bet();
       //Update game state
       wallet->withdraw_funds(bet);
+      std::cout << "Resultado: " << spinners->spin() << std::endl;
       //TODO calculate prize
 
       //Render output
@@ -35,7 +40,8 @@ void Slot::run ()
   } while (play_again());
 }
 
-bool Slot::play_again() {
+bool Slot::play_again()
+{
   std::string input = "";
   int input_length;
   char first_letter;
@@ -55,7 +61,7 @@ bool Slot::play_again() {
   }
 }
 
-void Slot::print_balance ()
+void Slot::print_balance()
 {
   std::cout << "Carteira : " << wallet->get_balance() << std::endl;
 }

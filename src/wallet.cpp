@@ -7,15 +7,15 @@
 
 #include "../include/wallet.h"
 
-Wallet::Wallet () : balance(INITIAL_BALANCE)
+Wallet::Wallet() : balance(INITIAL_BALANCE)
 {
 }
 
-Wallet::~Wallet ()
+Wallet::~Wallet()
 {
 }
 
-bool Wallet::withdraw_funds (int amount)
+bool Wallet::withdraw_funds(int amount)
 {
   if (balance < amount)
     return false;
@@ -23,7 +23,7 @@ bool Wallet::withdraw_funds (int amount)
   return true;
 }
 
-bool Wallet::deposit_funds (int amount)
+bool Wallet::deposit_funds(int amount)
 {
   if (amount < 0)
     return false;
@@ -31,7 +31,7 @@ bool Wallet::deposit_funds (int amount)
   return true;
 }
 
-int Wallet::get_balance ()
+int Wallet::get_balance()
 {
   return balance;
 }
