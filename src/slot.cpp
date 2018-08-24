@@ -14,6 +14,7 @@ Slot::Slot()
   this->spinners->add_spinner("ABBCDDEEEFFF");
   this->spinners->add_spinner("ABCCDDEEEFFF");
   this->spinners->add_spinner("ABCCDDEEFFFF");
+  this->prize_engine = new PrizeEngine();
 }
 
 Slot::~Slot()
@@ -24,19 +25,25 @@ Slot::~Slot()
 void Slot::run()
 {
   int bet, prize = 0;
+  std::string spin_res = "";
 
   print_balance();
   do {
-      //Get the user input
       bet = get_bet();
-      //Update game state
-      wallet->withdraw_funds(bet);
-      std::cout << "Resultado: " << spinners->spin() << std::endl;
-      //TODO calculate prize
+      std::cout << std::endl;
 
-      //Render output
-      wallet->deposit_funds(bet * prize);
+      wallet->withdraw_funds(bet);
+      spin_res = spinners->spin();
+      std::cout << "Resultado: " << spin_res << std::endl;
+      prize = prize_engine->evaluate(spin_res);
+      std::cout << "Premio: " << prize * bet;
+      if (prize > 0)
+        std::cout << "(" << prize << " * " << bet << ")";
+      std::cout << std::endl;
+
+      wallet->deposit_funds(prize * bet);
       print_balance();
+      std::cout << std::endl;
   } while (play_again());
 }
 
