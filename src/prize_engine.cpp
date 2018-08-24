@@ -9,13 +9,10 @@
 
 PrizeEngine::PrizeEngine()
 {
-  // TODO Auto-generated constructor stub
-
 }
 
 PrizeEngine::~PrizeEngine()
 {
-  // TODO Auto-generated destructor stub
 }
 
 int PrizeEngine::evaluate(std::string result)
