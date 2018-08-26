@@ -5,7 +5,7 @@
  *      Author: JP Cadinha
  */
 
-#include "../include/spinner_list.h"
+#include "spinner_list.h"
 
 SpinnerList::SpinnerList()
 {
@@ -19,13 +19,13 @@ SpinnerList::~SpinnerList()
   if (this->next)
     delete next;
   if (this->spinner)
-  delete spinner;
+    delete spinner;
 }
 
 void SpinnerList::add_spinner(std::string face_values)
 {
   if (!this->spinner) {
-    this->spinner = new Spinner(face_values);
+    this->spinner = new Spinner_Ch(face_values);
   } else {
     if (!this->next)
       this->next = new SpinnerList();
@@ -38,7 +38,7 @@ std::string SpinnerList::spin()
   std::string res = "";
 
   if (spinner)
-    res += spinner->spin();
+    res += this->spinner->spin();
   if (next)
     res += next->spin();
 

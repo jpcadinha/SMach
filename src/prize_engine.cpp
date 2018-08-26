@@ -5,7 +5,7 @@
  *      Author: JP Cadinha
  */
 
-#include "../include/prize_engine.h"
+#include "prize_engine.h"
 
 PrizeEngine::PrizeEngine()
 {

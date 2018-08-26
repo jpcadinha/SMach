@@ -5,7 +5,7 @@
  *      Author: JP Cadinha
  */
 #include <iostream>
-#include "../include/slot.h"
+#include "slot.h"
 
 int main(int argc, char **argv)
 {

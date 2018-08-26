@@ -12,9 +12,9 @@
 #include <ctype.h>
 #include <string>
 #include <stdlib.h>
-#include "../include/wallet.h"
-#include "../include/spinner_list.h"
-#include "../include/prize_engine.h"
+#include "wallet.h"
+#include "prize_engine.h"
+#include "spinner_list.h"
 
 class Slot
 {

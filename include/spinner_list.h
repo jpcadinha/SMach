@@ -8,9 +8,10 @@
 #ifndef SPINNER_LIST_H_
 #define SPINNER_LIST_H_
 
+#include <spinner_ch.h>
 #include <string>
 #include <time.h>
-#include "../include/spinner.h"
+#include "spinner.h"
 
 class SpinnerList
 {

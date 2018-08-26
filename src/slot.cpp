@@ -5,7 +5,7 @@
  *      Author: JP Cadinha
  */
 
-#include "../include/slot.h"
+#include "slot.h"
 
 Slot::Slot()
 {

@@ -5,7 +5,7 @@
  *      Author: JP Cadinha
  */
 
-#include "../include/wallet.h"
+#include "wallet.h"
 
 Wallet::Wallet() : balance(INITIAL_BALANCE)
 {
