@@ -5,8 +5,8 @@
  *      Author: JP Cadinha
  */
 
-#ifndef SPINNER_C6_H_
-#define SPINNER_C6_H_
+#ifndef SPINNER_CH_H_
+#define SPINNER_CH_H_
 
 #include <string>
 #include <cstdlib>
@@ -24,4 +24,4 @@ private:
   std::string face_values;
 };
 
-#endif /* SPINNER_C6_H_ */
+#endif /* SPINNER_CH_H_ */
