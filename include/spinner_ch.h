@@ -15,13 +15,13 @@
 class Spinner_Ch : public Spinner
 {
 public:
-  Spinner_Ch(std::string face_values);
+  Spinner_Ch(string face_values);
   virtual ~Spinner_Ch();
 
-  std::string spin();
+  string spin();
 
 private:
-  std::string face_values;
+  string face_values;
 };
 
 #endif /* SPINNER_CH_H_ */

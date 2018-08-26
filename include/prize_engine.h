@@ -10,13 +10,15 @@
 
 #include <string>
 
+using namespace std;
+
 class PrizeEngine
 {
 public:
-  PrizeEngine();
-  virtual ~PrizeEngine();
+  PrizeEngine() {};
+  virtual ~PrizeEngine() {};
 
-  int evaluate(std::string result);
+  virtual int evaluate(string result) = 0;
 };
 
 #endif /* PRIZE_ENGINE_H_ */

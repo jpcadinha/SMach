@@ -10,13 +10,15 @@
 
 #include <string>
 
+using namespace std;
+
 class Spinner
 {
 public:
   Spinner();
   virtual ~Spinner();
 
-  virtual std::string spin() = 0;
+  virtual string spin() = 0;
 };
 
 #endif /* SPINNER_H_ */

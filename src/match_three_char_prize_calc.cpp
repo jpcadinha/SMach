@@ -1,21 +1,21 @@
 /*
- * prize_engine.cpp
+ * MatchThreeCharPrizeCalc.cpp
  *
- *  Created on: 24/08/2018
+ *  Created on: 27/08/2018
  *      Author: JP Cadinha
  */
 
-#include "prize_engine.h"
+#include <match_three_char_prize_calc.h>
 
-PrizeEngine::PrizeEngine()
+MatchThreeCharPrizeCalc::MatchThreeCharPrizeCalc()
 {
 }
 
-PrizeEngine::~PrizeEngine()
+MatchThreeCharPrizeCalc::~MatchThreeCharPrizeCalc()
 {
 }
 
-int PrizeEngine::evaluate(std::string result)
+int MatchThreeCharPrizeCalc::evaluate(string result)
 {
   int prize = 0;
 

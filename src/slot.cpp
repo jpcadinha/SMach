@@ -14,7 +14,7 @@ Slot::Slot()
   this->spinners->add_spinner("ABBCDDEEEFFF");
   this->spinners->add_spinner("ABCCDDEEEFFF");
   this->spinners->add_spinner("ABCCDDEEFFFF");
-  this->prize_engine = new PrizeEngine();
+  this->prize_engine = new MatchThreeCharPrizeCalc();
 }
 
 Slot::~Slot()
@@ -25,37 +25,37 @@ Slot::~Slot()
 void Slot::run()
 {
   int bet, prize = 0;
-  std::string spin_res = "";
+  string spin_res = "";
 
   print_balance();
   do {
       bet = get_bet();
-      std::cout << std::endl;
+      cout << endl;
 
       wallet->withdraw_funds(bet);
       spin_res = spinners->spin();
-      std::cout << "Resultado: " << spin_res << std::endl;
+      cout << "Resultado: " << spin_res << endl;
       prize = prize_engine->evaluate(spin_res);
-      std::cout << "Premio: " << prize * bet;
+      cout << "Premio: " << prize * bet;
       if (prize > 0)
-        std::cout << "(" << prize << " * " << bet << ")";
-      std::cout << std::endl;
+        cout << "(" << prize << " * " << bet << ")";
+      cout << endl;
 
       wallet->deposit_funds(prize * bet);
       print_balance();
-      std::cout << std::endl;
+      cout << endl;
   } while (play_again());
 }
 
 bool Slot::play_again()
 {
-  std::string input = "";
+  string input = "";
   int input_length;
   char first_letter;
 
-  std::cout << "Jogar de novo? (S/N) -> ";
-  std::cin >> input;
-  std::cin.clear();
+  cout << "Jogar de novo? (S/N) -> ";
+  cin >> input;
+  cin.clear();
   input_length = input.length();
   first_letter = toupper(input[0]);
   if (input_length == 1 && first_letter == 'S') {
@@ -63,32 +63,32 @@ bool Slot::play_again()
   } else if (input_length == 1 && first_letter == 'N') {
     return false;
   } else {
-    std::cout << "Opcao invalida!" << std::endl;
+    cout << "Opcao invalida!" << endl;
     return play_again();
   }
 }
 
 void Slot::print_balance()
 {
-  std::cout << "Carteira : " << wallet->get_balance() << std::endl;
+  cout << "Carteira : " << wallet->get_balance() << endl;
 }
 
 int Slot::get_bet()
 {
   int max_bet, bet;
-  std::string input;
+  string input;
 
   max_bet = wallet->get_balance();
   max_bet = max_bet < 10 ? max_bet : 10;
   do {
-      std::cout << "Aposta (1 a " << max_bet << ") -> ";
-      std::cin.clear();
-      if (std::cin >> input) {
+      cout << "Aposta (1 a " << max_bet << ") -> ";
+      cin.clear();
+      if (cin >> input) {
         bet = atoi(input.c_str());
         if (bet > 0 && bet <= max_bet)
           return bet;
       }
-      std::cout << "Aposta invalida!" << std::endl;
+      cout << "Aposta invalida!" << endl;
   } while (true);
 
   return 0;
