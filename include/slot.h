@@ -10,7 +10,6 @@
 
 #include <iostream>
 #include <ctype.h>
-#include <match_three_char_prize_calc.h>
 #include <string>
 #include <stdlib.h>
 #include "wallet.h"

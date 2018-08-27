@@ -10,6 +10,8 @@
 
 #include "prize_engine.h"
 
+using namespace std;
+
 class MatchThreeCharPrizeCalc : public PrizeEngine
 {
 public:

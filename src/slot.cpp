@@ -14,7 +14,7 @@ Slot::Slot()
   this->spinners->add_spinner("ABBCDDEEEFFF");
   this->spinners->add_spinner("ABCCDDEEEFFF");
   this->spinners->add_spinner("ABCCDDEEFFFF");
-  this->prize_engine = new MatchThreeCharPrizeCalc();
+  this->prize_engine = PrizeEngine::Create(PC_ThreeChar);
 }
 
 Slot::~Slot()
@@ -38,7 +38,7 @@ void Slot::run()
       prize = prize_engine->evaluate(spin_res);
       cout << "Premio: " << prize * bet;
       if (prize > 0)
-        cout << "(" << prize << " * " << bet << ")";
+        cout << " (" << prize << " * " << bet << ")";
       cout << endl;
 
       wallet->deposit_funds(prize * bet);
@@ -52,6 +52,11 @@ bool Slot::play_again()
   string input = "";
   int input_length;
   char first_letter;
+
+  if (wallet->get_balance() <= 0) {
+    cout << "Carteira sem fundos!" << endl;
+    return false;
+  }
 
   cout << "Jogar de novo? (S/N) -> ";
   cin >> input;

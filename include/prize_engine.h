@@ -12,12 +12,16 @@
 
 using namespace std;
 
+enum PrizeCalculatorType {
+    PC_ThreeChar
+};
+
 class PrizeEngine
 {
 public:
-  PrizeEngine() {};
   virtual ~PrizeEngine() {};
 
+  static PrizeEngine* Create(PrizeCalculatorType type);
   virtual int evaluate(string result) = 0;
 };
 
