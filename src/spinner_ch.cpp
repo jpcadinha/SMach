@@ -1,10 +1,3 @@
-/*
- * spinner.cpp
- *
- *  Created on: 24/08/2018
- *      Author: JP Cadinha
- */
-
 #include "spinner_ch.h"
 
 Spinner_Ch::Spinner_Ch(string face_values)

@@ -1,10 +1,3 @@
-/*
- * spinner_list.h
- *
- *  Created on: 24/08/2018
- *      Author: JP Cadinha
- */
-
 #ifndef SPINNER_LIST_H_
 #define SPINNER_LIST_H_
 

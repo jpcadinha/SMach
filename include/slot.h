@@ -1,10 +1,3 @@
-/*
- * slot.h
- *
- *  Created on: 24/08/2018
- *      Author: JP Cadinha
- */
-
 #ifndef SLOT_H_
 #define SLOT_H_
 

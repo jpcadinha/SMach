@@ -1,10 +1,3 @@
-/*
- * MatchThreeCharPrizeCalc.h
- *
- *  Created on: 27/08/2018
- *      Author: JP Cadinha
- */
-
 #ifndef MATCHTHREECHARPRIZECALC_H_
 #define MATCHTHREECHARPRIZECALC_H_
 

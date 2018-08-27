@@ -1,10 +1,3 @@
-/*
- * MatchThreeCharPrizeCalc.cpp
- *
- *  Created on: 27/08/2018
- *      Author: JP Cadinha
- */
-
 #include <match_three_char_prize_calc.h>
 
 MatchThreeCharPrizeCalc::MatchThreeCharPrizeCalc()

@@ -1,10 +1,3 @@
-/*
- * Spinner.h
- *
- *  Created on: 26/08/2018
- *      Author: JP Cadinha
- */
-
 #ifndef SPINNER_H_
 #define SPINNER_H_
 

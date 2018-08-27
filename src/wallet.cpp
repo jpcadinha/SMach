@@ -1,10 +1,3 @@
-/*
- * Wallet.cpp
- *
- *  Created on: 23/08/2018
- *      Author: JP Cadinha
- */
-
 #include "wallet.h"
 
 Wallet::Wallet() : balance(INITIAL_BALANCE)

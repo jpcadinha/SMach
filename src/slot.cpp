@@ -1,10 +1,3 @@
-/*
- * slot.cpp
- *
- *  Created on: 24/08/2018
- *      Author: JP Cadinha
- */
-
 #include "slot.h"
 
 Slot::Slot()

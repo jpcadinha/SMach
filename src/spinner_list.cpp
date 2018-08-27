@@ -1,10 +1,3 @@
-/*
- * spinner_list.cpp
- *
- *  Created on: 24/08/2018
- *      Author: JP Cadinha
- */
-
 #include "spinner_list.h"
 
 SpinnerList::SpinnerList()
