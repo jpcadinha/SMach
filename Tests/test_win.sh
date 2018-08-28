@@ -3,7 +3,7 @@ echo "##############################"
 echo "# FMQSlotMachine test runner #"
 echo "##############################" 
 
-../Debug/FMQSlotMachine.exe < $1 > output
+../FMQSlotMachine.exe < $1 > output
 
 if [ $? == 0 ]
 then
