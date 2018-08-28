@@ -12,18 +12,32 @@ int MatchThreeCharPrizeCalc::evaluate(string result)
 {
   int prize = 0;
 
+// Old prize list
+//  if (result == "AAA")
+//    prize = 1000;
+//  else if (result == "BBB")
+//    prize = 500;
+//  else if (result == "CCC")
+//    prize = 250;
+//  else if (result == "DDD")
+//    prize = 150;
+//  else if (result == "EEE")
+//    prize = 50;
+//  else if (result == "FFF")
+//    prize = 20;
+
   if (result == "AAA")
-    prize = 1000;
+    prize = 400;
   else if (result == "BBB")
-    prize = 500;
+    prize = 180;
   else if (result == "CCC")
-    prize = 250;
+    prize = 70;
   else if (result == "DDD")
-    prize = 150;
+    prize = 32;
   else if (result == "EEE")
-    prize = 50;
+    prize = 12;
   else if (result == "FFF")
-    prize = 20;
+    prize = 6;
 
   return prize;
 }
